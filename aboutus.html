@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Khedr Artificial Flowers</title>
+    <style>
+      body {background:#1f0356;}
+      .logo
+      {
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 160px;
+
+        float:left;
+      }
+     
+      ul
+      {
+        list-style-type: none;
+        overflow: hidden;
+        padding-top:60px;
+        padding-right: 40px;
+      }
+
+      li
+      {
+        float:right;
+        margin-right: 25px;
+      }
+
+      .li_a
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+      }
+      .li_a:hover
+      {
+        border-bottom: 3px solid #c637a0;
+        clear:both;
+      }
+      
+      .li_a_active
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+        border-bottom: 3px solid #c637a0
+      }
+
+      .content_div_left
+      {
+		  		  position: absolute;
+
+        margin-top: 175px;
+        margin-left: 75px;
+      }
+      .content_div_right
+      {
+        margin-top: 125px;
+        margin-right:1150px;
+        float:right;
+      }
+      .p_header
+      {
+        position: absolute;
+        font-size: 45px;
+		  margin-left:150px;
+		  margin-top:100px;
+        font-family: sans-serif;
+        color:white;
+      }
+
+ 
+      .p_body_text
+      {
+        position: absolute;
+		  margin-left:180px;
+		  margin-top:200px;
+        font-size: 30px;
+        font-family: sans-serif;
+        color:rgb(177, 174, 174);
+      }
+
+ 
+      .submit_button
+      {
+        position: absolute;
+        background-color:#fa419a;
+		  width:10px;
+        border: none;
+        padding: 25px 125px;
+        cursor: pointer;
+        margin-top: 400px;
+        border-radius: 5px;
+      }
+
+      .submit_button:hover
+      {
+        background-color:#792262;
+      }
+
+      .submit_button_text
+      {
+        position: absolute;
+		float-right:25px;
+        color:white;
+		margin-top: -10px;
+		margin-left:-110px;
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+      }
+
+      .register_button
+      {
+        position: absolute;
+        background-color:white;
+        border: none;
+        padding: 20px 180px;
+        cursor: pointer;
+        margin-left: -60px;
+        margin-top:15px;
+        border-radius: 5px;
+      }
+
+      br
+      {
+        display: block;
+        margin:5px;
+      }
+      .footer
+      {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        margin-bottom: -800px;
+        padding:20px;
+        margin-left: 20%;
+      }
+
+    .input_email
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 5px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .email_label
+    {
+        position:relative;
+        font-size:18px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_name
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:170px;
+        padding: 13px 20px;
+        margin: 50px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .label_name
+    {
+        position:absolute;
+        font-size:18px;
+        margin: 80px 0px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_last
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:350px;
+        padding: 13px 20px;
+        margin: 50px 215px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .label_last
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 80px 225px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_message
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 105px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+
+    }
+
+    .label__message
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 180px 0px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+
+    form
+    {
+        margin-top:150px;
+    }
+		
+		.remember_me
+		{
+			position: absolute;
+			float-right:25px;
+			color:white;
+			margin-top: 325px;
+			margin-left:-5px;
+			border-style:none;
+			border-color: aliceblue;
+			font-size: 18px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+		}
+
+
+				.img
+		{
+			transition: transform 1s; /* Animation */
+			width:250px;
+			height:250px;
+			border-radius:75px;
+			margin:auto;
+			text-decoration: none;
+		}
+
+        .img:hover 
+        {
+            transform: scale(1.1);
+        }
+
+		
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c637a0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #1f0356;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fd707f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+    </style>
+	
+	
+	<script>
+	
+  function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+
+	
+	</script>
+  </head>
+<body>
+
+
+
+<div>
+  <a href="products.html"><img src="Images/logo.png" class="logo"></a>
+  <ul>
+        <li><a href="login.html" class="li_a">Login</a></li>
+        <li><a href="Contact Us.html" class="li_a" >Contact Us</a></li>
+        <li><a href="aboutus.html" class="li_a_active" >About Us</a></li>
+		<li><a href="bestsellers.html" class="li_a">Bestsellers</a></li>
+        <li><a href="products.html" class="li_a">Products</a></li>  </ul>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="products.html" style="font-family: Arial, Helvetica, sans-serif;">Products</a>
+  <a href="bestsellers.html" style="font-family: Arial, Helvetica, sans-serif;">Bestsellers</a>   
+  <a href="aboutus.html" style="font-family: Arial, Helvetica, sans-serif;">About Us</a>
+  <a href="Contact Us.html" style="font-family: Arial, Helvetica, sans-serif;">Contact Us</a>
+  <a href="login.html" style="font-family: Arial, Helvetica, sans-serif;">Login</a>   
+
+</div>
+
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ About Us</button>  
+</div>
+
+
+
+<div class="content_div_left"> 
+	<img src="Images/index_pic1.jpg" style="border-radius:5px;"width="350" height="352" alt=""/>
+</div>
+	<div class="content_div_right">
+	  	<div class="p_header">About us</div>
+		
+	<div class="p_body_text">Here we sell the finest artificial flowers and decorations for your home to make it look more lively. We only import the best-grade materials internationally, ensuring our customers get the highest quality of products.
+		<br>
+		<br>
+		
+		<a href="https://web.whatsapp.com">
+		<img  class="img" style="width:100px; height:100px;padding-left:125px;padding-right: 100px;padding-top:120px;" src="Images/whatsapp.png"></a>
+		<a href="mailto:sherifkhaled27@gmail.com">
+		<img   class="img" style="width:100px; height:100px;padding-right: 100px;padding-top:100px;" src="Images/gmail.png">
+		</a>
+		<a href="https://www.facebook.com/Khedrflowers/">
+		<img   class="img" style="width:100px; height:100px;padding-right: 100px;padding-top:100px;" src="Images/facebook.png">
+		</a>
+
+	</div>
+
+	</div>
+	<div>
+	
+		<div style="top:450px;left:70px; border-radius: 25px;" class="mapouter"><div class="gmap_canvas" style="border-radius: 25px;" ><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=smouha&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:300px;width:400px;}</style><a href="https://www.embedgooglemap.net">how to embed google maps</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;}</style></div></div>
+		
+	</div>
+<footer>
+
+      <img class="footer" src="Images/footer.png">
+</footer>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Khedr Artificial Flowers</title>
+    <style>
+      body {background:#1f0356;}
+      .logo
+      {
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 160px;
+
+        float:left;
+      }
+     
+      ul
+      {
+        list-style-type: none;
+        overflow: hidden;
+        padding-top:60px;
+        padding-right: 40px;
+      }
+
+      li
+      {
+        float:right;
+        margin-right: 25px;
+      }
+
+      .li_a
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+      }
+      .li_a:hover
+      {
+        border-bottom: 3px solid #c637a0;
+        clear:both;
+      }
+      
+      .li_a_active
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+        border-bottom: 3px solid #c637a0
+      }
+
+      .content_div_middle
+      {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 500px;
+        color:white;
+      }
+      .p_header
+      {
+        position: absolute;
+        font-size: 45px;
+        font-family: sans-serif;
+        color:white;
+      }
+
+ 
+      .p_body_text
+      {
+        position: relative;
+        top: -40px;
+        font-size: 18 px;
+        font-family: sans-serif;
+        color:rgb(177, 174, 174);
+      }
+
+ 
+      .login_button
+      {
+        position: absolute;
+        background-color:#fa419a;
+		  width:10px;
+        border: none;
+        padding: 25px 125px;
+        cursor: pointer;
+        margin-top: 370px;
+        border-radius: 5px;
+      }
+
+      .login_button:hover
+      {
+        background-color:#792262;
+      }
+
+      .login_button_text
+      {
+        position: absolute;
+		float-right:25px;
+        color:white;
+		margin-top: -10px;
+		margin-left:-110px;
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+      }
+
+
+      br
+      {
+        display: block;
+        margin:5px;
+      }
+      .footer
+      {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        margin-bottom: -800px;
+        padding:20px;
+        margin-left: 20%;
+      }
+
+    .input_cc
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 5px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .label_cc
+    {
+        position:relative;
+        font-size:18px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_name
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:170px;
+        padding: 13px 20px;
+        margin: 50px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .label_name
+    {
+        position:absolute;
+        font-size:18px;
+        margin: 80px 0px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_cvv
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:350px;
+        padding: 13px 20px;
+        margin: 50px 215px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .label_cvv
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 80px 225px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_billing
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 105px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+
+    }
+
+    .label_billing
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 180px 0px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+		input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+}
+
+    form
+    {
+        margin-top:150px;
+    }
+		
+		input[type='checkbox']:checked {
+        background-color:#fa419a;
+}
+		
+		.remember_me
+		{
+
+			float-right:25px;
+			color:white;
+			margin-top: 300px;
+			margin-left:-5px;
+			border-style:none;
+			border-color: aliceblue;
+			font-size: 18px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+		}
+		
+				.remember_me_text
+		{
+
+			float-right:25px;
+			color:white;
+			margin-top: -32px;
+			margin-left:20px;
+			border-style:none;
+			border-color: aliceblue;
+			font-size: 18px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+		}
+
+
+
+
+
+    </style>
+	  
+	  <script>
+	  		  function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+		  
+		  var cc;
+		  var name;
+		  var cvv;
+		  var billing;
+		  
+		  
+		  async function submit()
+		  {
+			  cc=document.getElementById('cc').value;
+			  cvv=document.getElementById('cvv').value;
+			  name=document.getElementById('name').value;
+			  billing=document.getElementById('billing').value;
+
+			  			 
+			  if(cc===("123456789") && cvv===("123") && name===("ziad"))
+			  {
+				  	alert("Purchase was a success, it will be delivered to "+billing);
+				  	window.location.replace("products.html");			  }
+			  else{
+				  	window.alert("Couldn't connect to card, please try again!");
+				  
+				  document.getElementById('cc').value="";
+				  document.getElementById('cvv').value="";
+				  document.getElementById('name').value="";
+				  document.getElementById('billing').value="";
+
+				  }
+			  
+		
+			  		  
+		  }
+	
+	  
+	  </script>
+	  
+  </head>
+  <body>
+<div>
+  <a href="products.html"><img src="Images/logo.png" class="logo"></a>
+  <ul>
+        <li><a href="login.html" class="li_a">Login</a></li>
+        <li><a href="Contact Us.html" class="li_a" >Contact Us</a></li>
+        <li><a href="aboutus.html" class="li_a" >About Us</a></li>
+		<li><a href="bestsellers.html" class="li_a">Bestsellers</a></li>
+        <li><a href="products.html" class="li_a">Products</a></li>      </ul>
+    </div>
+    <div class="content_div_middle">
+        <div class="p_header">
+            Payment by Visa
+        </div>
+        <form>
+            <div class="label_cc">
+                Credit Card Number
+            </div>
+            <div class="input_cc">
+                <input type="text" required="required" class="input_cc" id="cc" placeholder="Credit Card Number">
+            </div>
+            <div class="label_name">
+                Name
+            </div>
+            <div class="input_name">
+                <input type="text" class="input_name" id="name" placeholder="Name">       
+            </div>
+            <div class="label_cvv">
+                CVV
+            </div>
+            <div class="input_cvv">
+                <input type="password" class="input_name" id="cvv" placeholder="CVV">
+            </div>
+            <div class="label_billing">
+                Billing Address
+            </div>
+            <div class="input_billing">
+                <input class="input_billing" id="billing" placeholder="Address">
+            </div>
+
+			<div class="login_button">
+				<a onclick="submit()">
+				<div class="login_button_text">Confirm Purchase</div>
+					</a>
+			</div>
+			
+		  <div class="remember_me">
+			<input type="checkbox" id="remember">
+		</div>
+						<div class="remember_me_text"><p class="remember_me_text">Remember Me</p> </div>
+
+			
+        </form>
+     
+    </div>
+
+    <footer> <img class="footer" src="Images/footer.png">
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Khedr Artificial Flowers</title>
+    <style>
+      body {background:#1f0356;}
+      .logo
+      {
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 160px;
+
+        float:left;
+      }
+     
+      ul
+      {
+        list-style-type: none;
+        overflow: hidden;
+        padding-top:60px;
+        padding-right: 40px;
+      }
+
+      li
+      {
+        float:right;
+        margin-right: 25px;
+      }
+
+      .li_a
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+      }
+      .li_a:hover
+      {
+        border-bottom: 3px solid #c637a0;
+        clear:both;
+      }
+
+      .li_a_active
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+        border-bottom: 3px solid #c637a0
+      }
+
+
+      .content_div_left
+      {
+        margin-top: 100px;
+        margin-left: 300px;
+      }
+      .content_div_right
+      {
+        margin-top: -370px;
+        margin-right: 300px;
+        float:right;
+      }
+      .p_header
+      {
+        font-size: 55px;
+        font-family: sans-serif;
+        color:white;
+      }
+      .p_body_text
+      {
+        position: relative;
+        top: -40px;
+        font-size: 18 px;
+        font-family: sans-serif;
+        color:rgb(177, 174, 174);
+      }
+
+      .button_get_started 
+      {
+        background-color:#c637a0;
+        color:white;
+        border: none;
+        padding: 15px 62px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 22px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        cursor: pointer;
+        margin: 4px 2px;
+        margin-top: -120px;
+        border-radius: 5px;
+      }
+
+      .button_get_started:hover
+      {
+        background-color:#792262;
+
+      }
+
+      .slideshow
+      {
+        position:absolute;
+        margin-left: -500px;
+        width: 450px;
+        height: 450px;
+        border-radius: 25px;
+      }
+
+      br
+      {
+        display: block;
+        margin:5px;
+      }
+      .footer
+      {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        margin-bottom: -800px;
+        padding:20px;
+        margin-left: 20%;
+      }
+		table
+		{
+
+
+			position:absolute;
+			width:100%;
+			height:50%;
+			border:0px;
+			
+		}
+		
+		.td_img{
+			text-align: center;
+			padding:10px;
+		}
+		.img
+		{
+			transition: transform 1s; /* Animation */
+			width:250px;
+			height:250px;
+			border-radius:75px;
+			margin:auto;
+		}
+
+        .img:hover 
+        {
+            transform: scale(1.1);
+        }
+		
+		.td_text
+		{
+			top:0px;
+			font-family: sans-serif;
+			font-size:25px;
+			color:#faa1aa;
+			text-align:center;
+		}
+
+
+        
+
+    </style>
+
+<script>
+	
+			  function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+
+	
+	var i = 0;
+	var images1 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/YPBD_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1634934661","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/YPBD_TOP_preset_proflowers-mx-hero-lv-new.jpeg?v=1611357498"];
+	var images2 = ["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/TSBD_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1637603907","https://media.discordapp.net/attachments/633743417096142875/922800444772859944/TSB_SCALE_preset_proflowers-mx-hero-lv-new.png"];
+	var images3 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/F5454D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1636590010","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/F5454D_TOP_preset_proflowers-mx-hero-lv-new.jpeg?v=1636593646"];
+	var images4 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/S5272D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1633083867","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/S5272D_TOP_preset_proflowers-mx-hero-lv-new.jpeg?v=1615902577"];	
+	var images5 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/NFGD_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1614358260","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/NFGD_TOP_preset_proflowers-mx-hero-lv-new.jpeg?v=1614362282"];
+	var images6 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/FE81_2120N_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1633378703","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/FE81_LAY_preset_proflowers-mx-hero-lv-lay.jpeg?v=1632966930"];
+		var images7 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/F5453D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1636589932","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/F5453D_TOP_preset_proflowers-mx-hero-lv-new.jpeg?v=1636593709"];
+	var images8 =["https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/FRMDR5_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1624738232","https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/FRMDR5_ALT_V2_preset_proflowers-mx-hero-lv-alt.jpeg?v=1624745945"];
+
+	
+
+
+	function swapImage()
+  {
+	  document.prod_pic1.src= images1[i];
+  document.prod_pic2.src= images2[i];
+	  	  document.prod_pic3.src= images3[i];
+  document.prod_pic4.src= images4[i];
+	  document.prod_pic5.src= images5[i];
+  document.prod_pic6.src= images6[i];
+	  	  document.prod_pic7.src= images7[i];
+  document.prod_pic8.src= images8[i];
+
+
+  if(i < images1.length - 1) {i++;}
+  else {i = 0;}
+  setTimeout("swapImage()",3000);
+  }
+  window.onload=swapImage;
+	
+	
+	async function sign_out()
+	{		
+		if(confirm("Are you sure you want to sign out?"))
+		{
+			window.alert("Press OK to continue..");
+			await sleep(3000);
+			window.location.replace("login.html");
+		}
+	
+	}
+
+
+    
+    window.onload = function() {
+   var url = document.location.href,
+      params = url.split('?')[1].split('&'),
+      data = {},
+      tmp;
+   for (var i = 0, l = params.length; i < l; i++) {
+      tmp = params[i].split('=');
+      data[tmp[0]] = tmp[1];
+   }
+   console.log(data.name);
+}
+
+
+  </script>
+
+
+  </head>
+  <body>
+    <div>
+      <a href="products.html"><img src="Images/logo.png" class="logo"></a>
+      <ul>
+        <li><a class="li_a" onclick="sign_out()">Sign out</a></li>
+        <li><a href="#" class="li_a" >Contact Us</a></li>
+        <li><a href="#" class="li_a" >About Us</a></li>
+		          <li><a href="#" class="li_a" >Bestsellers</a></li>
+
+        <li><a href="#" class="li_a_active">Products</a></li>
+      </ul>
+    </div>
+
+
+	<div>
+	<table>
+	
+	<tr>
+		<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/YPBD_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1634934661" name="prod_pic1" class="img">
+		</td>
+				<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/TSBD_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1637603907" name="prod_pic2" class="img">
+		</td>
+		
+				<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/F5454D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1636590010" name="prod_pic3" class="img">
+		</td>
+
+				<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/S5272D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1633083867"  name="prod_pic4" class="img">
+		</td>
+
+		</tr>
+
+		<tr>
+		
+			<td class="td_text">You're Precious Bouquet</td>
+			<td class="td_text">Truly Stunning Bouquet</td>
+			<td class="td_text">Lost in a Dream Bouquet</td>
+			<td class="td_text">Beautiful Spirit Basket</td>
+
+
+		</tr>
+		
+			<tr>
+		<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/S5272D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1633083867" name="prod_pic5" class="img" >
+		</td>
+				<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/F5454D_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1636590010" name="prod_pic6" class="img">
+		</td>
+		
+				<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/NFGD_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1614358260"  name="prod_pic7" class="img">
+		</td>
+
+				<td class="td_img">
+			<img src="https://cdn.shopify.com/s/files/1/0507/3754/5401/t/1/assets/FE81_2120N_LOL_preset_proflowers-mx-hero-lv-new.jpeg?v=1633378703"  name="prod_pic8" class="img">
+		</td>
+
+
+	</tr>
+
+				<tr>
+		
+			<td class="td_text">Wilds of Winter Bouquet</td>
+			<td class="td_text">Rosy Cheeks Bouquet</td>
+			<td class="td_text">Pink Rose Bouquet</td>
+			<td class="td_text">Happy Together Bouquet</td>
+
+
+		</tr>
+
+	
+	</table>
+	</div>
+    <footer>  
+      <img class="footer" src="Images/footer.png">
+    </footer>
+  </body>
+</html>

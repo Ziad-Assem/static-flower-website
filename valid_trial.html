@@ -1,0 +1,280 @@
+<html>
+<head>
+<style>
+
+
+.submit_button
+      {
+        position: absolute;
+        background-color:#fa419a;
+		  width:10px;
+        border: none;
+        padding: 25px 125px;
+        cursor: pointer;
+        margin-top: 300px;
+        border-radius: 5px;
+      }
+
+      .submit_button:hover
+      {
+        background-color:#792262;
+      }
+
+      .submit_button_text
+      {
+        position: absolute;
+        color:white;
+		margin-top: -10px;
+		margin-left:-110px;
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+      }
+
+
+    
+      .footer
+      {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        margin-bottom: -800px;
+        padding:20px;
+        margin-left: 20%;
+      }
+
+    .input_email
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 5px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .email_label
+    {
+        position:relative;
+        font-size:18px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    label
+    {
+        position:relative;
+        font-size:18px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .input_name
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:170px;
+        padding: 13px 20px;
+        margin: 155px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .label_name
+    {
+        position:absolute;
+        font-size:18px;
+        margin: 125px 0px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_last
+    {
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        padding: 13px 20px;
+		top:70px;left:100px;
+        border-radius: 4px;
+		box-sizing: border-box;
+
+
+		}
+
+    .label_last
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 125px 225px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+
+
+</style>
+
+
+<script>
+
+function validation(){
+	var valid = true;
+	
+	formLabels = document.getElementsByTagName("label");
+	
+	var firstName = document.regForm.firstName.value;
+	if(firstName==""){
+		formLabels[0].innerHTML="First Name: [Required]";
+		formLabels[0].style="color: red";
+		valid = false;
+	}
+	else if( !isNaN(firstName)){
+		formLabels[0].innerHTML="First Name: [Text Only]";
+		formLabels[0].style="color: red";
+		valid = false;
+	}
+	else {
+		formLabels[0].innerHTML="First Name:";
+		formLabels[0].style="color: black";
+		valid = (valid) ? true : false;
+	}
+	
+	var lastName = document.regForm.lastName.value;
+	if(lastName==""){
+		formLabels[1].innerHTML="Last Name: [Required]";
+		formLabels[1].style="color: red";
+		valid = false;
+	}
+	else if( !isNaN(lastName)){
+		formLabels[1].innerHTML="Last Name: [Text Only]";
+		formLabels[1].style="color: red";
+		valid = false;
+	}
+	else {
+		formLabels[1].innerHTML="Last Name:";
+		formLabels[1].style="color: black";
+		valid = (valid) ? true : false;
+	}
+	
+	var email = document.regForm.email.value;
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if(email==""){
+		formLabels[2].innerHTML="Email: [Required]";
+		formLabels[2].style="color: red";
+		valid = false;
+	}
+	else if(!re.test(email)){
+		formLabels[2].innerHTML="Email: [Incorrect Email]";
+		formLabels[2].style="color: red";
+		valid = false;
+	}
+	else {
+		formLabels[2].innerHTML="Email:";
+		formLabels[2].style="color: black";
+		valid = (valid) ? true : false;
+	}
+	
+	var password = document.regForm.password.value;
+	if(password == ""){
+		formLabels[3].innerHTML="Password: [Required]";
+		formLabels[3].style="color: red";
+		valid = false;
+	}
+	else if(password.length < 8){
+		formLabels[3].innerHTML="Password: [Must be > 8]";
+		formLabels[3].style="color: red";
+		valid = false;
+	}
+	else {
+		formLabels[3].innerHTML="Password:";
+		formLabels[3].style="color: black";
+		valid = (valid) ? true : false;
+	}
+	
+	var age = document.regForm.age.value;
+	if(age < 0 || age > 100){
+		formLabels[4].innerHTML="Age: [Must be between 0 and 100]";
+		formLabels[4].style="color: red";
+		valid = false;
+	}
+	else if( isNaN(age)){
+		formLabels[4].innerHTML="Age: [Age must be a number]";
+		formLabels[4].style="color: red";
+		valid = false;
+	}
+	else {
+		formLabels[4].innerHTML="Age:";
+		formLabels[4].style="color: black";
+		valid = (valid) ? true : false;
+	}
+	
+	var mobile = document.regForm.mobile.value;
+	if( isNaN(mobile)){
+		formLabels[5].innerHTML="Mobile: [Numbers Only]";
+		formLabels[5].style="color: red";
+		valid = false;
+	}
+	else {
+		formLabels[5].innerHTML="Mobile:";
+		formLabels[5].style="color: black";
+		valid = (valid) ? true : false;
+	}
+	
+	return valid;
+}
+
+function clear2(){
+	var myArray = new Array();
+	myArray[0] = "First Name: *";
+	myArray[1] = "Last Name: *";
+	myArray[2] = "Email: *";
+	myArray[3] = "Password: *";
+	myArray[4] = "Age:";
+	myArray[5] = "Mobile:";
+	for(var i=0 ; i < myArray.length ; i++){
+		formLabels[i].innerHTML = myArray[i];
+		formLabels[i].style = "color: black";
+	}
+}
+
+</script>
+
+
+</head>
+
+<body>
+<div id="myDiv">
+  <h3 align="center">Form Validation Example</h3>
+  <form onsubmit="return validation()" method="post" name="regForm">
+		<label>First Name: *</label>
+		<input type="text" name="firstName" placeholder="Your First Name" size="25" />
+		<label>Last Name: *</label>
+		<input type="text" name="lastName" placeholder="Your Last Name" size="25" />
+		<label>Email: *</label>
+		<input type="text" name="email" size="25" placeholder="Your Email" />
+		<label>Password: *</label>
+		<input type="password" name="password" placeholder="Your Password" size="25" />
+		<label>Age:</label>
+		<input type="text" name="age" size="25" placeholder="Your Age" />
+		<label>Mobile:</label>
+		<input type="text" name="mobile" size="25" placeholder="Your Mobile" />
+
+		<div align="center">
+		<input type="submit" value="Register" />
+		<input type="reset" value="Clear" onclick="clear2();" />
+		<div>
+  </form>
+</div>
+</body>
+
+</html>

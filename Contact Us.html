@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Khedr Artificial Flowers</title>
+    <style>
+      body {background:#1f0356;}
+      .logo
+      {
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 160px;
+
+        float:left;
+      }
+     
+      ul
+      {
+        list-style-type: none;
+        overflow: hidden;
+        padding-top:60px;
+        padding-right: 40px;
+      }
+
+      li
+      {
+        float:right;
+        margin-right: 25px;
+      }
+
+      .li_a
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+      }
+      .li_a:hover
+      {
+        border-bottom: 3px solid #c637a0;
+        clear:both;
+      }
+      
+      .li_a_active
+      {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        border: 3px solid transparent;
+        border-bottom: 3px solid #c637a0
+      }
+
+      .content_div_middle
+      {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 500px;
+        color:white;
+      }
+      .p_header
+      {
+        position: absolute;
+        font-size: 45px;
+        font-family: sans-serif;
+        color:white;
+      }
+
+ 
+      .p_body_text
+      {
+        position: relative;
+        top: -40px;
+        font-size: 18 px;
+        font-family: sans-serif;
+        color:rgb(177, 174, 174);
+      }
+
+ 
+      .submit_button
+      {
+        position: absolute;
+        background-color:#fa419a;
+		  width:10px;
+        border: none;
+        padding: 25px 125px;
+        cursor: pointer;
+        margin-top: 300px;
+        border-radius: 5px;
+      }
+
+      .submit_button:hover
+      {
+        background-color:#792262;
+      }
+
+      .submit_button_text
+      {
+        position: absolute;
+		float-right:25px;
+        color:white;
+		margin-top: -10px;
+		margin-left:-110px;
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+      }
+
+
+      br
+      {
+        display: block;
+        margin:5px;
+      }
+      .footer
+      {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        margin-bottom: -800px;
+        padding:20px;
+        margin-left: 20%;
+      }
+
+    .input_email
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 5px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .email_label
+    {
+        position:relative;
+        font-size:18px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_name
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:170px;
+        padding: 13px 20px;
+        margin: 155px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .label_name
+    {
+        position:absolute;
+        font-size:18px;
+        margin: 125px 0px;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_last
+    {
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        padding: 13px 20px;
+		top:70px;left:100px;
+        border-radius: 4px;
+		box-sizing: border-box;
+
+
+		}
+
+    .label_last
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 125px 225px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .input_message
+    {
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14PX;
+        border-style: hidden;
+        width:400px;
+        padding: 13px 20px;
+        margin: 105px -10px;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+
+    }
+
+    .label__message
+    {
+        position:absolute;
+        font-size:18px;
+        color:white;
+        margin: 180px 0px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+		input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+}
+
+    form
+    {
+        margin-top:150px;
+    }
+		
+		input[type='checkbox']:checked {
+        background-color:#fa419a;
+;
+}
+		
+		.remember_me
+		{
+
+			float-right:25px;
+			color:white;
+			margin-top: 300px;
+			margin-left:-5px;
+			border-style:none;
+			border-color: aliceblue;
+			font-size: 18px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+		}
+		
+				.remember_me_text
+		{
+
+			float-right:25px;
+			color:white;
+			margin-top: -32px;
+			margin-left:20px;
+			border-style:none;
+			border-color: aliceblue;
+			font-size: 18px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+		}
+		.mail_icon
+		{
+			width:80px;
+			height:80px;
+			position:absolute;
+			float:right;
+			margin-left:300px;
+		}
+
+		.submitted_text
+		{
+
+        font-size:25px;
+        color:white;
+        margin: 125px -200px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			    word-wrap: break-word;      /* IE 5.5-7 */
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    white-space: pre-wrap;      /* current browsers */
+
+
+		}
+		
+		.alert
+		{
+			font-size:20px;
+			color:white;
+			margin: 260px 0px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			font-style:italic;
+
+		}
+		.wordWrap {
+    word-wrap: break-word;      /* IE 5.5-7 */
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    white-space: pre-wrap;      /* current browsers */
+}
+
+		
+      .continue_button
+      {
+        position: absolute;
+        background-color:#fa419a;
+		  width:10px;
+        border: none;
+        padding: 25px 125px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .continue_button:hover
+      {
+        background-color:#792262;
+      }
+
+		      .clear_button
+      {
+        position: absolute;
+        background-color:white;
+		  width:10px;
+        border: none;
+        padding: 25px 50px;
+        cursor: pointer;
+        margin: 300px 300px;
+        border-radius: 5px;
+      }
+
+      .clear_button:hover
+      {
+                background-color: rgb(189, 185, 185);
+      }
+
+
+      .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c637a0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #1f0356;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fd707f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+    </style>
+	  
+	  <script>
+			var email;
+			var first;
+		 	var last;
+			var message;
+		  
+		  
+		  function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+		  
+		  
+		  function clearr()
+		  {
+			  document.getElementById('email').value="";
+			  document.getElementById('first').value="";
+			  document.getElementById('last').value="";
+			  document.getElementById('message').value="";
+
+		  }
+		  
+		  async function submit()
+		  {
+			  email=document.getElementById('email').value;
+			  first=document.getElementById('first').value;
+			  last=document.getElementById('last').value;
+			  message=document.getElementById('message').value;
+			  
+			  console.log(email+" "+first+" "+last+" "+message +" "+isNaN(first));
+			 
+			  if((email.includes("@") && email.includes(".com")) && isNaN(first) && isNaN(last))
+			  {
+				  document.getElementById('form').style["display"]="none";
+				  document.getElementById('after_submit').style="";
+
+				  document.getElementById("submitted").innerHTML="Thanks for reaching us, "+first+" "+last+", we will be in contact with you soon.\n Your message was: "+message;
+				  
+			  }
+			  else{
+				  	document.getElementById("alert").innerHTML="Invalid format, please try again!";
+				  	await sleep(5000);
+				  	document.getElementById("alert").innerHTML="";
+				  }
+			  
+		
+			  		  
+		  }
+	
+		  
+      function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+
+		  
+	  </script>
+  </head>
+  <body>
+
+
+<div>
+  <a href="products.html"><img src="Images/logo.png" class="logo"></a>
+  <ul>
+        <li><a href="login.html" class="li_a">Login</a></li>
+        <li><a href="Contact Us.html" class="li_a_active" >Contact Us</a></li>
+        <li><a href="aboutus.html" class="li_a" >About Us</a></li>
+		<li><a href="bestsellers.html" class="li_a">Bestsellers</a></li>
+        <li><a href="products.html" class="li_a">Products</a></li>      </ul>
+    </div>
+
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="products.html" style="font-family: Arial, Helvetica, sans-serif;">Products</a>
+      <a href="bestsellers.html" style="font-family: Arial, Helvetica, sans-serif;">Bestsellers</a>   
+      <a href="aboutus.html" style="font-family: Arial, Helvetica, sans-serif;">About Us</a>
+      <a href="Contact Us.html" style="font-family: Arial, Helvetica, sans-serif;">Contact Us</a>
+      <a href="login.html" style="font-family: Arial, Helvetica, sans-serif;">Login</a>   
+
+    </div>
+
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Contact Us</button>  
+    </div>
+
+
+
+    <div class="content_div_middle" style="" id="form">
+        		<div class="p_header"> Contact Us</div>
+		<div><img src="Images/mail_icon.png" class="mail_icon"></div>
+
+		<div id="contact_form">
+        <form>
+            <div class="email_label"> Email</div>
+            <div class="input_email">
+              <input type="email" required class="input_email" id="email" placeholder="Email">
+            </div>
+            <div class="label_name"> First</div>
+            <div>
+              <input type="text" class="input_name" id="first" placeholder="First Name">       
+            </div>
+          <div class="label_last"> Last</div>
+            <div class="input_last">
+                <input type="text" class="input_last" id="last" placeholder="Last Name">
+          </div>
+            <div class="label__message"> Message</div>
+          <div class="input_message">
+                <input class="input_message" id="message" placeholder="Message.." value="">
+			  	<div class="alert" id="alert"></div>
+            </div>
+
+			<a onClick="submit()">
+		  <div class="submit_button">
+				<div class="submit_button_text">Submit Message</div>
+			</div>
+			</a>
+			
+						<a onClick="clearr()">
+		  <div class="clear_button">
+				<div class="submit_button_text" style="color: black;margin:-10px -35px">Clear</div>
+			</div>
+			</a>
+
+			
+			
+        </form>
+			</div>
+     
+    </div>
+	  
+	  
+	  <div class="content_div_middle" id="after_submit" style="display:none">
+        	<div class="submitted_text" id="submitted"></div>
+		  <a href="products.html">
+		  <div class="continue_button">
+		  <div class="submit_button_text">Continue</div>
+		  </div>
+			  </a>
+	  </div>	  
+
+    <footer> <img class="footer" src="Images/footer.png">
+    </footer>
+  </body>
+</html>

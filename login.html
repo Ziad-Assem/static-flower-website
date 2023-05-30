@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Khedr Artificial Flowers</title>
+  <style>
+    body {
+      background: #1f0356;
+    }
+
+    .logo {
+      position: relative;
+      left: 30px;
+      top: 30px;
+      width: 160px;
+
+      float: left;
+    }
+
+    ul {
+      list-style-type: none;
+      overflow: hidden;
+      padding-top: 60px;
+      padding-right: 40px;
+    }
+
+    li {
+      float: right;
+      margin-right: 25px;
+    }
+
+    .li_a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+      border: 3px solid transparent;
+    }
+
+    .li_a:hover {
+      border-bottom: 3px solid #c637a0;
+      clear: both;
+    }
+
+    .li_a_active {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+      border: 3px solid transparent;
+      border-bottom: 3px solid #c637a0
+    }
+
+    .content_div_left {
+      margin-top: 100px;
+      margin-left: 300px;
+      border-bottom: 2px solid rgb(177, 174, 174);
+      ;
+      float: left;
+    }
+
+    .content_div_right {
+      margin-top: 30px;
+      margin-right: 300px;
+      float: right;
+    }
+
+    .p_header {
+      font-size: 35px;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .p_header2 {
+      position: relative;
+      font-size: 23px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      margin-top: 60px;
+      margin-right: 120px;
+      float: right;
+    }
+
+    .p_header3 {
+      position: absolute;
+      font-size: 23px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      margin-top: 240px;
+      margin-left: 100px;
+      float: right;
+
+    }
+
+    .p_body_text {
+      position: relative;
+      top: -40px;
+      font-size: 18 px;
+      font-family: sans-serif;
+      color: rgb(177, 174, 174);
+    }
+
+    .login_box {
+      position: absolute;
+      background-color: #ffb5d9;
+      color: white;
+      width: 450px;
+      height: 400px;
+      font-size: 22px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-top: 0px;
+      margin-left: -300px;
+      border-radius: 5px;
+      float: right;
+    }
+
+    .login_button {
+      position: absolute;
+      background-color: #fa419a;
+      border: none;
+      padding: 20px 180px;
+      cursor: pointer;
+      margin-left: -75px;
+      border-radius: 5px;
+    }
+
+    .login_button:hover {
+      background-color: #792262;
+    }
+
+    .login_button_text {
+      position: absolute;
+      color: white;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      margin-top: -10px;
+      margin-left: -75px;
+    }
+
+    .register_button {
+      position: absolute;
+      background-color: white;
+      border: none;
+      padding: 20px 180px;
+      cursor: pointer;
+      margin-left: -60px;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    .register_button:hover {
+      background-color: rgb(189, 185, 185);
+    }
+
+    .register_button_text {
+      position: absolute;
+      color: black;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      margin-top: -10px;
+      margin-left: -75px;
+
+    }
+
+
+    br {
+      display: block;
+      margin: 5px;
+    }
+
+    .footer {
+      position: relative;
+      width: 60%;
+      height: 60%;
+      margin-bottom: -350px;
+      padding: 20px;
+      margin-left: 20%;
+    }
+
+    h6 {
+      position: absolute;
+      width: 150%;
+      border-bottom: 2px solid #000;
+      margin-top: 100px;
+      margin-left: -50px;
+      float: right;
+    }
+
+    .p_header_login {
+      position: relative;
+      font-size: 23px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      margin-top: 100px;
+      margin-right: 300px;
+      float: right;
+    }
+
+    .input_username {
+      position: absolute;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20PX;
+      border-style: hidden;
+      width: 350px;
+      padding: 10px 10px;
+      margin: 50px 20px;
+      display: inline-block;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .label_username {
+      position: absolute;
+      font-size: 30px;
+      margin: 30px 180px;
+      color: black;
+      font-family: sans-serif;
+    }
+
+    .input_password {
+      position: absolute;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20PX;
+      border-style: hidden;
+      width: 350px;
+      padding: 10px 10px;
+      margin: 100px 20px;
+      display: inline-block;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+
+    .login_button2 {
+      position: absolute;
+      background-color: #fa419a;
+      border: none;
+      padding: 20px 70px;
+      cursor: pointer;
+      margin-left: 75px;
+      margin-top: 300px;
+      border-radius: 5px;
+    }
+
+    .login_button2:hover {
+      background-color: #792262;
+    }
+
+    .login_button_text2 {
+      position: absolute;
+      color: white;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      margin-top: -10px;
+      margin-left: -25px;
+    }
+
+
+    .back_button2 {
+      position: absolute;
+      background-color: white;
+      border: none;
+      padding: 20px 70px;
+      cursor: pointer;
+      margin-left: 270px;
+      margin-top: 300px;
+      border-radius: 5px;
+    }
+
+    .back_button_text2 {
+      position: absolute;
+      color: black;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      margin-top: -10px;
+      margin-left: -25px;
+    }
+
+    .back_button2:hover {
+      background-color: rgb(189, 185, 185);
+    }
+
+
+    .alert {
+      position: relative;
+      font-size: 23px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      top: 360px;
+      left: -100px;
+      float: right;
+    }
+
+    .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c637a0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #1f0356;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fd707f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+  </style>
+
+  <script>
+    function switch_login() {
+      document.getElementById("log_in_clicked").style = "";
+    }
+    function switch_main() {
+      document.getElementById("log_in_clicked").style["display"] = "none";
+
+    }
+
+
+    var email;
+    var password;
+
+    function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+
+
+    async function submit() {
+      email = document.getElementById('email').value;
+      password = document.getElementById('password').value;
+
+      if (email === ("admin@gmail.com") && password === ("admin")) {
+        alert("Welcome back, admin!");
+        window.location.replace("signed_in_products.html");
+      }
+      else {
+        document.getElementById("alert").innerHTML = "Wrong email or password!";
+        await sleep(5000);
+        document.getElementById("alert").innerHTML = "";
+      }
+
+
+
+    }
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+  <div>
+    <a href="products.html"><img src="Images/logo.png" class="logo"></a>
+    <ul>
+      <li><a href="login.html" class="li_a_active">Login</a></li>
+      <li><a href="Contact Us.html" class="li_a">Contact Us</a></li>
+      <li><a href="aboutus.html" class="li_a">About Us</a></li>
+      <li><a href="bestsellers.html" class="li_a">Bestsellers</a></li>
+      <li><a href="products.html" class="li_a">Products</a></li>
+    </ul>
+  </div>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+    <a href="products.html" style="font-family: Arial, Helvetica, sans-serif;">Products</a>
+    <a href="bestsellers.html" style="font-family: Arial, Helvetica, sans-serif;">Bestsellers</a>   
+    <a href="aboutus.html" style="font-family: Arial, Helvetica, sans-serif;">About Us</a>
+    <a href="Contact Us.html" style="font-family: Arial, Helvetica, sans-serif;">Contact Us</a>
+    <a href="login.html" style="font-family: Arial, Helvetica, sans-serif;">Login</a>   
+
+  </div>
+
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Login</button>  
+  </div>
+
+
+
+  <div class="content_div_left">
+    <p class="p_header">
+      The freshest flowers<br>are here!<br><br><br>
+    <p class="p_body_text">Wether it's for the holidays, a birthday or just because,<br>getting flowers is a nice idea.
+    </p>
+
+    </p>
+  </div>
+  <div class="content_div_right">
+    <div class="login_box">
+      <div class="p_header2">
+        Bloom where you are.<br>
+        <a onclick="switch_login()">
+          <div class="login_button">
+            <div class="login_button_text">
+              Welcome Back, Login
+            </div>
+          </div>
+        </a>
+        <h6></h6>
+
+      </div>
+      <div class="p_header3">
+        Join and start your journey!
+        <a onclick="disabled_signup()">
+
+          <a href="signupp.html">
+            <div class="register_button">
+              <div class="register_button_text">
+                Sign Up with Email
+              </div>
+          </a>
+      </div>
+
+    </div>
+  </div>
+  <div class="login_box" id="log_in_clicked" style="display:none">
+
+    <div class="label_username">Login</div>
+    <div class="input_username">
+      <input type="text" class="input_username" id="email" placeholder="Email">
+    </div>
+    <div class="input_password">
+      <input type="password" class="input_password" id="password" placeholder="Password">
+    </div>
+    <a onclick="submit()">
+      <div class="login_button2">
+        <div class="login_button_text2">Login</div>
+      </div>
+    </a>
+    <a onclick="switch_main()">
+      <div class="back_button2">
+        <div class="back_button_text2">Back</div>
+      </div>
+    </a>
+    <div class="alert" id="alert"></div>
+  </div>
+
+  </div>
+
+
+
+  <footer>
+    <img class="footer" src="Images/footer.png">
+  </footer>
+</body>
+
+</html>
